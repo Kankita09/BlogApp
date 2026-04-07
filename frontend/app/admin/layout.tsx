@@ -18,7 +18,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         </Link>
         <nav style={{ padding: 'var(--space-2) 0' }}>
            {navItems.map((item) => (
-              <Link key={item.href} href={item.href} className="admin-nav-item">
+              <Link key={item.href} href={item.href as any} className="admin-nav-item">
                  <span>{item.icon}</span>
                  {item.label}
               </Link>
