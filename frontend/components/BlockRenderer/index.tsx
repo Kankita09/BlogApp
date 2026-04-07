@@ -27,7 +27,7 @@ export function BlockRenderer({ blocks }: BlockRendererProps) {
 // ─── Block Components ────────────────────────────────────────────────────────
 
 function HeadingBlock({ data }: { data: { level: number; text: string } }) {
-  const Tag = `h${data.level}` as keyof JSX.IntrinsicElements;
+  const Tag = `h${data.level}` as any;
   const id = data.text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
   return <Tag id={id} className={`block-h${data.level}`}>{data.text}</Tag>;
 }

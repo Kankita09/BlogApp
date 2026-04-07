@@ -24,7 +24,7 @@ export function cloudinaryUrl(publicId: string, opts: CloudinaryOptions = {}): s
     gravity = 'auto',
   } = opts;
 
-  const transforms: string[] = [
+  const transforms = [
     `f_${format}`,
     `q_${quality}`,
     crop && `c_${crop}`,

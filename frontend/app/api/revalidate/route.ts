@@ -10,12 +10,15 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
   }
 
   if (slug) {
+    // @ts-ignore
     revalidateTag(`post-${slug}`);
     revalidatePath(`/blog/${slug}`);
   }
 
   // Always revalidate the blog homepage and popular posts
+  // @ts-ignore
   revalidateTag('posts');
+  // @ts-ignore
   revalidateTag('posts-popular');
   revalidatePath('/blog');
 

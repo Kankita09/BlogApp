@@ -54,7 +54,7 @@ export function Footer() {
               <ul className="footer__links">
                 {links.map(({ label, href }) => (
                   <li key={href}>
-                    <Link href={href} className="footer__link">{label}</Link>
+                    <Link href={href as any} className="footer__link">{label}</Link>
                   </li>
                 ))}
               </ul>

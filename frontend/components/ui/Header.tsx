@@ -51,7 +51,7 @@ export function Header() {
           {NAV_LINKS.map(({ href, label }) => (
             <Link
               key={href}
-              href={href}
+              href={href as any}
               className={`header__nav-link${pathname === href ? ' header__nav-link--active' : ''}`}
             >
               {label}
@@ -95,7 +95,7 @@ export function Header() {
             </button>
           )}
 
-          <Link href="/admin/dashboard" className="btn btn--primary" style={{ padding: 'var(--space-2) var(--space-4)', fontSize: 'var(--text-sm)' }}>
+          <Link href={"/admin/dashboard" as any} className="btn btn--primary" style={{ padding: 'var(--space-2) var(--space-4)', fontSize: 'var(--text-sm)' }}>
             Dashboard
           </Link>
         </div>

@@ -18,9 +18,7 @@ const nextConfig = {
   // No source maps in production
   productionBrowserSourceMaps: false,
   // Typed routes
-  experimental: {
-    typedRoutes: true,
-  },
+  typedRoutes: true,
   // Security headers
   async headers() {
     return [
